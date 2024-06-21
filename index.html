@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/img/imgsIconseLogos/faviconMarronSemFundoRedondo.png" type="image/x-icon">
+    <title>Galvão Arquitetura</title>
+    <link rel="stylesheet" href="src/assets/css/reset.css">
+    <link rel="stylesheet" href="src/assets/css/estilos.css">
+    <link rel="stylesheet" href="src/assets/css/fontes.css">
+    <link rel="stylesheet" href="src/assets/css/responsive.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/reisenberg">
+    <link rel="folha de estilo" href=" https://fonts.cdnfonts.com/css/montserrat ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="cabecalho containerPai">
+        <div class="boxCabecalho containerFilho">
+            <div class="boxCabecalhoLogo">
+                <img src="./src/img/imgsIconseLogos/logotipoHorizontal1.png" alt="Logo Tipo Galvão Arquitetura">
+            </div>
+            <div class="boxMenuIcon">
+                <div class="menu-icon" onclick="toggleMenu()" id="menuIcon">
+                    &#9776; <!-- Ícone de três traços -->
+                </div>
+            </div>
+            <nav class="boxMenu">
+                <ul class="boxMenuHome" id="menu">
+                    <li class="boxMenuHomeLista">
+                        <a href="#div1" class=""
+                            onclick="scrollToTop(); toggleDisplay('div1'); toggleMenu(); selecionarLink(this); ">Home</a>
+                        <a href="#div2" class="" onclick="scrollToTop(); toggleDisplay('div2'); toggleMenu(); selecionarLink(this);
+                            ">Sobre</a>
+                        <a href="#div3" class="oculto"
+                            onclick="scrollToTop(); toggleDisplay('div3'); toggleMenu(); selecionarLink(this); ">Time</a>
+                        <a href="#div4" class=""
+                            onclick="scrollToTop(); toggleDisplay('div4'); toggleMenu(); selecionarLink(this); ">Projetos</a>
+                        <a href="#div5" class=""
+                            onclick="scrollToTop(); toggleDisplay('div5'); toggleMenu(); selecionarLink(this); ">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <main id="home" class="home containerPai">
+        <div class="homePaiDivs containerFilho">
+            <div id="div1" class="content pg-display-none homeBox mostrar">
+                <img src="./src/img/imgsHome/mansao.jpg" alt="Foto da home">
+            </div>
+            <div id="div2" class="content pg-display-none sobreBox">
+                <div class="sobreBoxDivs">
+                    <div class="sobreBoxDivBlocos">
+                        <div class="sobreBoxDivBlocos1">
+                            <div class="sobreBoxDivImg">
+                                <h1>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;SOBRE
+                                    o ESCRITÓRIO
+                                </h1>
+                                <p class="textoSobreBoxDiv">
+                                    <span class="span1">GALVÃO ARQUITETURA</span> é um escritório de arquitetura
+                                    que desenvolve projetos personalizados que transitam
+                                    por diferentes estilos, programas e escalas. Busca
+                                    constantemente traduzir as expectativas e necessidades
+                                    dos clientes em espaços autênticos e funcionais a partir
+                                    de um olhar criativo, técnico e versátil.
+                                </p>
+                                <div class="textoSobreBoxDivImg">
+                                    <img src="src/img/imgsSobre/luanagalvao.jpg" alt="">
+                                </div>
+                                <p class="textoSobreBoxDiv2">
+                                    A Arquiteta <span class="span1">LUANA GALVÃO</span>, graduada pela Pontifícia
+                                    Universidade Católica de Campinas, acumulou
+                                    experiências em escritórios de referência no estado de São
+                                    Paulo e, em 2017 fundou o escritório.</p>
+                                <p class="textoSobreBoxDiv3">
+                                    O processo criativo do escritório é bastante singular,
+                                    considerando as pessoas, o espaço e o mundo
+                                    contemporâneo na elaboração de soluções eficientes
+                                    através de uma precisa metodologia de trabalho. Para
+                                    que tudo isso aconteça, contamos com uma equipe
+                                    qualificada.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sobreBoxDivBlocosSegunda">
+                        <div class="sobreBoxDivBlocosSegunda1">
+                            <div class="sobreBoxDivBlocosSegunda1Text">
+                                <div class="linha"></div>
+                                <h2>NOSSOS SERVIÇOS</h2>
+                                <div class="linha"></div>
+                            </div>
+                        </div>
+                        <div class="sobreBoxDivBlocosSegunda2">
+                            <div class="sobreServicosBoxGeral">
+                                <div class="sobreServicosBox1">
+                                    <div class="sobreServicosBox1Titulo">
+                                        <h1>ARQUITETÔNICO</h1>
+                                    </div>
+                                    <div class="sobreServicosBox1Texto">
+                                        <P>
+                                            Elaboração de projetos
+                                            arquitetônicos, envolvendo o
+                                            desenvolvimento completo
+                                            ou a reforma, de caráter
+                                            residencial, comercial
+                                            ou corporativo.
+                                        </P>
+                                    </div>
+                                    <div class="sobreServicosBox1Img">
+                                        <a href="https://www.instagram.com/p/C2QV_R3OmLV/?igsh=c3p1Njd5YTVvOTFj"
+                                            target="_blank">
+                                            <img src="./src/img/imgsSobre/imgArquitetônico.jpeg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="sobreServicosBox2">
+                                    <div class="sobreServicosBox2Titulo">
+                                        <h1>INTERIORES</h1>
+                                    </div>
+                                    <div class="sobreServicosBox2Texto">
+                                        <P>
+                                            Estudo e harmonização
+                                            de ambientes, resultando
+                                            na reformaou completa
+                                            estruturaçãodo local.
+                                            Visitas a fornecedores
+                                            para alinhamento de
+                                            projeto.
+                                        </P>
+                                    </div>
+                                    <div class="sobreServicosBox2Img">
+                                        <a href="https://www.instagram.com/p/C1sX9C8uSc5/?igsh=MWt5OTI1Y3R0dWU0Zg=="
+                                            target="_blank">
+                                            <img src="./src/img/imgsSobre/imgInteriores.jpeg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="sobreServicosBox3">
+                                    <div class="sobreServicosBox3Titulo">
+                                        <h1>OBRAS</h1>
+                                    </div>
+                                    <div class="sobreServicosBox3Texto">
+                                        <P>
+                                            Acompanhamento e
+                                            vistorias de obras para
+                                            conferências da execução
+                                            conformeprojeto.
+                                        </P>
+                                    </div>
+                                    <div class="sobreServicosBox3Img">
+                                        <a href="https://www.instagram.com/p/CxiR4kzMSpx/" target="_blank">
+                                            <img src="./src/img/imgsSobre/imgObras.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="sobreServicosBox4">
+                                    <div class="sobreServicosBox4Titulo">
+                                        <h1>AMBIENTAÇÃO</h1>
+                                    </div>
+                                    <div class="sobreServicosBox4Texto">
+                                        <P>
+                                            Auxílio na compra de
+                                            móveis soltos e itens de
+                                            decoração. Produção dos
+                                            ambientes.
+                                        </P>
+                                    </div>
+                                    <div class="sobreServicosBox4Img">
+                                        <a href="https://www.instagram.com/reel/CnC-CvFKZqv/?igsh=Y2l1ajY4Nno3YTc1"
+                                            target="_blank">
+                                            <img src="./src/img/imgsSobre/imgAmbientação.jpeg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div id="div3" class="content pg-display-none timeBox">3
+            </div>
+
+
+
+
+
+
+            <div id="div4" class="content pg-display-none projetosBox  ">
+                <div class="section-body">
+                    <div class="section-projects">
+                        <div class="section-projects--filters">
+                            <ul>
+                                <li class="active">All</li>
+                                <li>Salas</li>
+                                <li>Cozinhas</li>
+                                <li>Quartos</li>
+                                <li>Banheiros</li>
+                                <li>Áreas gourmet</li>
+                            </ul>
+                        </div>
+                        <div class="section-projects--photos">
+                            <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5>Sala de estar</h5>
+                                        <p>Integrada</p>
+                                    </div>
+                                    <img src="src/img/imgsTeste/LuanaGalvao-ProjXapada-creditos @zehcastedo (1).jpg"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5>Sala de estar</h5>
+                                        <p>Integrada</p>
+                                    </div>
+                                    <img src="src/img/imgsTeste/LuanaGalvao-ProjXapada-creditos @zehcastedo (2).jpg"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5></h5>
+                                        <p></p>
+                                    </div>
+                                    <img src="src/img/imgsTeste/LuanaGalvao-ProjXapada-creditos @zehcastedo (4).jpg"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5></h5>
+                                        <p></p>
+                                    </div>
+                                    <img src="src/img/imgsTeste/LuanaGalvao-ProjXapada-creditos @zehcastedo (5).jpg"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5></h5>
+                                        <p></p>
+                                    </div>
+                                    <img src="src/img/imgsTeste/LuanaGalvao-ProjXapada-creditos @zehcastedo (12).jpg"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5></h5>
+                                        <p></p>
+                                    </div>
+                                    <img src="src/img/imgsTeste/LuanaGalvao-ProjXapada-creditos @zehcastedo (35).jpg"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5></h5>
+                                        <p></p>
+                                    </div>
+                                    <img src="src/img/imgsTeste/LuanaGalvao-ProjXapada-creditos @zehcastedo (36).jpg"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5></h5>
+                                        <p></p>
+                                    </div>
+                                    <img src="src/img/imgsTeste/LuanaGalvao-ProjXapada-creditos @zehcastedo (37).jpg"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5></h5>
+                                        <p></p>
+                                    </div>
+                                    <img src="src/img/imgsTeste/LuanaGalvao-ProjXapada-creditos @zehcastedo (34).jpg"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5></h5>
+                                        <p></p>
+                                    </div>
+                                    <img src="src/img/imgsTeste/LuanaGalvao-ProjXapada-creditos @zehcastedo (25).jpg"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5></h5>
+                                        <p></p>
+                                    </div>
+                                    <img src="src/img/imgsTeste/LuanaGalvao-ProjXapada-creditos @zehcastedo (19).jpg"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="section-projects--photo">
+                                <div class="section-projects--photoarea">
+                                    <div class="section-projects--photoinfo">
+                                        <h5></h5>
+                                        <p></p>
+                                    </div>
+                                    <img src="src/img/imgsTeste/LuanaGalvao-ProjXapada-creditos @zehcastedo (20).jpg"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            
+            <div id="div5" class="content pg-display-none contatoBox">
+                <div class="contatoBoxIcones">
+                    <div class="contatoBoxIconesBox containerFilho">
+                        <div class="contatoBoxIconesBox1">
+                            <a href="https://api.whatsapp.com/send?phone=5511993741000" target="_blank">
+                                <img src="./src/img/imgIcones/32px/3066975_circle_whatsapp_social_high quality_message_media_social media.png"
+                                    alt="Icone WhatsApp">
+                                <h1>+55 11 99374-1000</h1>
+                            </a>
+                        </div>
+                        <div class="contatoBoxIconesBox2">
+                            <p>Seg à Sex: 8h às 18h<br>
+                                Sab: 8h às 12h</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contatoBoxFormulario">
+                    <h2>Formulário de Contato</h2>
+                    <form class="contatoBoxFormularioCampos" action="processar_formulario.php" method="POST">
+                        <div class="contatoBoxFormularioCampos1">
+                            <label for="nome"></label>
+                            <input type="text" class="campo-form" id="nome" name="nome" placeholder="nome" required>
+
+                            <label for="email"></label>
+                            <input type="email" class="campo-form" id="email" name="email" placeholder="e-mail"
+                                required>
+
+                            <label for="telefone"></label>
+                            <input type="tel" id="telefone" class="campo-form" name="telefone" placeholder="telefone"
+                                required>
+                        </div>
+                        <label for="mensagem"></label>
+                        <textarea class="campo-mensagem" id="mensagem" name="mensagem" rows="4" placeholder="mensagem"
+                            required></textarea>
+                        <button class="botao-enviar" type="submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+                <div class="contatoBoxLocalizacao">
+                    <div class="localizacaoTexto ">
+                        <h3>Localização</h3>
+                        <p>
+                            Tiradentes, 735 <br> Vila Teixeira, Salto/SP
+                        </p>
+                    </div>
+                    <div class="map containerFilho">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d458.40542460234684!2d-47.29573337361216!3d-23.19779879824493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf51fc588c82f3%3A0x3e7a63638d006556!2sLuana%20Galv%C3%A3o%20Arquitetura!5e0!3m2!1spt-BR!2sbr!4v1708697172269!5m2!1spt-BR!2sbr"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="rodaPe">
+            <div class="rodaPeBoxGeral">
+                <div class="rodaPeBoxBloco1">
+                    <div class="rodaPeBoxLinks">
+                        <ul class="rodaPeBoxMenu">
+                            <li class="rodaPeBoxMenuListaTexto">
+                                <a class="rodaPeBoxMenuListaTexto">MENU</a>
+                            </li>
+                            <li class="rodaPeBoxMenuLista">
+                                <a class="" onclick="toggleDisplay('div1'); scrollToTop()">Home</a>
+                                <a onclick="toggleDisplay('div2'); scrollToTop()">Sobre</a>
+                                <a class="oculto" onclick="toggleDisplay('div3'); scrollToTop()">Time</a>
+                                <a class="" onclick="toggleDisplay('div4'); scrollToTop()">Projetos</a>
+                                <a class="" onclick="toggleDisplay('div5'); scrollToTop()">Contato</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rodaPeBoxIcons">
+                        <div class="rodaPeBoxIconsContato">
+                            <a onclick="toggleDisplay('div5'); scrollToTop()">
+                                <h1>ENTRE EM CONTATO</h1>
+                            </a>
+                            </a>
+                        </div>
+                        <div class="rodaPeBoxIconsTodos">
+                            <a href="https://www.instagram.com/luanagalvaoarquitetura?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                                target="_blank">
+                                <img src="./src/img/imgIcones/48px/3066990_photo_circle_social_media_collage_instagram_social media.png"
+                                    alt="Icone Instagram">
+                            </a>
+                            <a href="https://www.facebook.com/luanagalvaoarquitetura" target="_blank">
+                                <img src="./src/img/imgIcones/48px/3066961_social media_friendship_circle_social_facebook_high quality_media.png"
+                                    alt="Icone FaceBook">
+                            </a>
+                            <a href="https://www.tiktok.com/@luanagalvaoarquitetura" target="_blank">
+                                <img src="./src/img/imgIcones/48px/3066981_high quality_media_circle_friendship_social media_social_tumblr.png"
+                                    alt="Icone TikTok">
+                            </a>
+                            <a href="https://api.whatsapp.com/send?phone=5511993741000" target="_blank">
+                                <img src="./src/img/imgIcones/48px/3066975_circle_whatsapp_social_high quality_message_media_social media.png"
+                                    alt="Icone WhatsApp">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="rodaPeBoxLogo">
+                        <img src="./src/img/imgsIconseLogos/logoTipoVerticalMarcadaguaAparado.png" alt="">
+                    </div>
+                </div>
+                <div class="rodaPeBoxBloco2">
+                    <div class="rodaPeBoxDireitos">
+                        <p>
+                            © 2024. Luana Galvão Arquitetura. <br>Todos os direitos reservados <a
+                                href="https://github.com/luancdo" target="_blank">| Desenvolvedor: Luan Cesar
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./src/js/index.js"></script>
+</body>
+
+</html>
+
+
+<!-- <p>© 2024. Luana Galvão Arquitetura. Todos os direitos reservados.</p> -->

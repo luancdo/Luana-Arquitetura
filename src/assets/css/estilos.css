@@ -1,0 +1,892 @@
+/* 
+- Para criar uma variavel que todo o codigo consiga ler, tem que ser criada dentro da :root{}
+
+:root{
+    --NOME: atributo
+} 
+- Caso a variavel não tenha pode se colocar outra colocando , e o outro nome. 
+
+- Degrade
+/* background: linear-gradient(0deg, rgba(224,211,195,0.3) 0%, rgba(219,207,191,0.5) 6%, rgba(190,179,165,0.85) 60%, rgba(14,5,5,0.95) 100%); 
+*/
+
+/*width: 100vw; largura igual à largura da tela*/
+/*height: 100vh; altura igual à altura da tela */
+
+
+
+
+
+/*Geral */
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #e0d3ce;
+    /* background-color: #e0d3ce; */
+}
+
+.containerPai {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tmContainer,
+.containerFilho {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    display: inline-block;
+    background-color: #b87650;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    /* Largura da barra de rolagem */
+}
+
+/*::-webkit-scrollbar-track {
+background-color: #f1f1f1; /* Cor de fundo da área da barra de rolagem */
+/*} */
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Cor da barra de rolagem */
+}
+
+
+
+
+/*header*/
+.cabecalho {
+    background-color: #2e3847;
+}
+
+.boxCabecalho {
+    display: flex;
+}
+
+.boxCabecalhoLogo {
+    flex: 1;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.boxCabecalhoLogo img {
+    width: 280px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.boxMenu {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    z-index: 999;
+}
+
+.boxMenuHome {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.boxMenu li a {
+    text-decoration: solid;
+    font-family: Sans-serif;
+    padding: 12px;
+    color: #fff;
+    font-weight: lighter;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+
+.cabecalho .boxMenu ul a:hover {
+    color: rgb(224, 211, 195);
+    border-bottom: 1px solid;
+}
+
+.boxMenu li a.ativo {
+    /* font-weight: bold; Mantém o texto em negrito para o link ativo */
+    color: rgb(224, 211, 195);
+    /* Altera a cor do texto para o link ativo */
+    border-bottom: 1px solid;
+    /* Adiciona a linha inferior para o link ativo */
+}
+
+.boxMenu li a.oculto,
+.rodaPeBoxMenu li a.oculto {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    /* (Remove a cor de destaque ao tocar) */
+    /* -webkit-touch-callout: none; */
+    /* (Evita o menu de contexto para copiar imagem, etc., em dispositivos de toque) */
+    /* -webkit-user-select: none; */
+    /* (Impede a cópia e colagem, para desativar a seleção de texto) */
+    /* -moz-user-select: none; */
+    /* -ms-user-select: none; */
+    /* user-select: none; */
+}
+
+
+
+
+
+/*main*/
+.homePaiDivs {
+    width: 100%;
+}
+
+
+/*homeBox*/
+.homeBox img {
+    width: 100%;
+    height: 100%;
+    /*Mantem a img cortada e no local correto.*/
+    object-fit: cover;
+}
+
+
+
+/*sobreBox*/
+.sobreBox {
+    width: 100%;
+}
+
+.sobreBoxDivs {
+    display: flex;
+    flex-direction: column;
+}
+
+.sobreBoxDivBlocos {
+
+}
+
+.sobreBoxDivBlocos1 {
+    display: flex;
+    background-image: url(../../img/imgsSobre/imgSobrePrincipal.jpg);
+    background-size: cover;
+}
+
+.sobreBoxDivImg {
+    width: 100%;
+    height: calc(100vh - 94px);
+}
+
+.sobreBoxDivImg h1 {
+    position: absolute;
+    top: calc(20% + 94px);
+    left: 50px;
+    padding-top: 0px;
+    width: 200px;
+    font-family: 'Montserrat';
+    font-weight: normal;
+    font: Montserrate 100;
+    color: rgb(140, 104, 82);
+    font-size: 36px;
+}
+
+.textoSobreBoxDiv {
+    position: absolute;
+    top: calc(10% + 94px);
+    left: 350px;
+    text-align: justify;
+    width: 30%;
+    font-family: sans-serif;
+    color: #465671;
+    font-size: 17px;
+    text-align: left;
+}
+
+.textoSobreBoxDiv2 {
+    position: absolute;
+    top: calc(35% + 94px);
+    left: 350px;
+    text-align: justify;
+    width: 30%;
+    font-family: sans-serif;
+    color: #465671;
+    font-size: 17px;
+    text-align: left;
+}
+
+.textoSobreBoxDiv3 {
+    position: absolute;
+    top: calc(40% + 194px);
+    left: 350px;
+    text-align: justify;
+    width: 30%;
+    font-family: sans-serif;
+    color: #465671;
+    font-size: 17px;
+    text-align: left;
+}
+
+.span1 {
+    font-size: large;
+    color: rgb(140, 104, 82);
+}
+
+.textoSobreBoxDivImg{
+    display: none;
+}
+
+.sobreBoxDivBlocosSegunda {
+    width: 100%;
+    height: calc(100vh - 50px);
+}
+
+.sobreBoxDivBlocosSegunda1 {
+    height: 20%;
+    display: flex;
+    padding-left: 5%;
+    align-items: center;
+}
+
+.sobreBoxDivBlocosSegunda1Text {
+    color: rgb(140, 104, 82);
+    font-family: 'Montserrat';
+    font-weight: normal;
+    padding-top: 20px;
+}
+
+.linha {
+    height: 2px;
+    /* Espessura da linha */
+    background-color: rgb(47, 56, 71);
+    /* Cor da linha */
+    margin: 10px 0;
+    /* Espaçamento acima e abaixo da linha */
+}
+
+.sobreBoxDivBlocosSegunda2 {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+.sobreServicosBoxGeral {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 70px;
+    padding-top: 20px;
+}
+
+.sobreServicosBox1,
+.sobreServicosBox2,
+.sobreServicosBox3,
+.sobreServicosBox4 {
+    height: 100%;
+    width: 200px;
+    background-color: rgb(53, 61, 77);
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-right: 3%;
+    margin-left: 3%;
+    clip-path: polygon(0 0, 80% 0, 100% 10%, 100% 100%, 100% 100%, 20% 100%, 0 90%, 0 0);
+    display: flex;
+    flex-direction: column;
+}
+
+.sobreServicosBox1Titulo,
+.sobreServicosBox2Titulo,
+.sobreServicosBox3Titulo,
+.sobreServicosBox4Titulo {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    padding-top: 18%;
+    position: relative;
+}
+
+.sobreServicosBox1Titulo h1,
+.sobreServicosBox2Titulo h1,
+.sobreServicosBox3Titulo h1,
+.sobreServicosBox4Titulo h1 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 40%;
+    width: calc(100% - 25px);
+    background-color: rgb(140, 104, 82);
+    color: rgb(47, 56, 71);
+    font-size: 18px;
+    font-family: 'Montserrat', sem serifa;
+    padding: 5px;
+    border-top: solid 1px rgb(226, 221, 215);
+    border-bottom: solid 1px rgb(226, 221, 215);
+    border-right: solid 1px rgb(226, 221, 215);
+}
+
+.sobreServicosBox1Texto,
+.sobreServicosBox2Texto,
+.sobreServicosBox3Texto,
+.sobreServicosBox4Texto {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobreServicosBox1Texto P,
+.sobreServicosBox2Texto P,
+.sobreServicosBox3Texto P,
+.sobreServicosBox4Texto P {
+    height: 80%;
+    width: 80%;
+    font-family: 'Montserrat', sem serifa;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    font-size: 11px;
+}
+
+.sobreServicosBox1Img,
+.sobreServicosBox2Img,
+.sobreServicosBox3Img,
+.sobreServicosBox4Img {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+}
+
+.sobreServicosBox1Img img,
+.sobreServicosBox2Img img,
+.sobreServicosBox3Img img,
+.sobreServicosBox4Img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+.sobreServicosBox1Img img:hover,
+.sobreServicosBox2Img img:hover,
+.sobreServicosBox3Img img:hover,
+.sobreServicosBox4Img img:hover {
+    opacity: 0.7;
+}
+
+
+
+
+
+/*timeBox*/
+.timeBox {
+    color: #fff;
+}
+
+
+
+/*projetosBox*/
+.projetosBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-body {
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.section-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-projects--filters {
+    border: 1px solid #E0D3C3;
+    background-color: #b69d8a;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.section-projects--filters ul,
+.section-projects--filters li {
+    list-style: none;
+}
+
+.section-projects--filters li {
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    cursor: pointer;
+    border-left: 2px solid #E0D3C3;
+    color: #e8e8e8;
+}
+
+.section-projects--filters li:hover,
+.section-projects--filters li.active {
+    border-bottom: 3px solid #a77553;
+}
+
+.section-projects--filters li:first-child {
+    border-left: 0;
+}
+
+.section-projects--photos {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    /*Ele permite aquebra de linha caso os itens não caiba todos na linha.*/
+    justify-content: center;
+}
+
+.section-projects--photo {
+    width: 300px;
+    cursor: pointer;
+}
+
+.section-projects--photoarea {
+    margin: 10px;
+    width: 280px;
+    height: 160px;
+}
+
+.section-projects--photoarea img {
+    width: inherit;
+    height: inherit;
+}
+
+.section-projects--photoinfo {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: inherit;
+    height: inherit;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.section-projects--photoinfo h5 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.section-projects--photoarea:hover .section-projects--photoinfo {
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+/*contatoBox*/
+.contatoBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.contatoBoxIcones {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contatoBoxIconesBox {
+    justify-content: space-between;
+}
+
+.contatoBoxIconesBox1,
+.contatoBoxIconesBox2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    width: 50%;
+}
+
+.contatoBoxIconesBox1 a {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.1s ease;
+
+}
+
+.contatoBoxIconesBox1 a:hover {
+    opacity: 0.7;
+}
+
+.contatoBoxIconesBox img {
+    width: 32px;
+}
+
+.contatoBoxIconesBox h1,
+.contatoBoxIconesBox p{
+    font-size: 22px;
+    font-weight: lighter;
+    color: rgb(38, 38, 38);
+    padding: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.contatoBoxIconesBox2 {
+    flex-direction: column;
+
+}
+
+.contatoBoxIconesBox2 h1 {
+    font-size: 20px;
+
+}
+
+.contatoBoxFormulario {
+    width: 100%;
+    height: calc(100vh - 120px);
+    display: none;
+    /*Bloquado até eu finalizar o curso de banco de dados.*/
+    flex-direction: column;
+    align-items: center;
+}
+
+.contatoBoxFormulario h2 {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    width: 100%;
+    height: 15%;
+    color: rgb(38, 38, 38);
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.contatoBoxFormularioCampos {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 60px;
+}
+
+.contatoBoxFormularioCampos1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.campo-form {
+    margin-inline-end: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 50px;
+    width: 100%;
+    border: 1px solid #7e7e7e;
+    padding: 3px;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.campo-mensagem {
+    margin-top: 20px;
+}
+
+.contatoBoxFormulario form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contatoBoxFormularioCampos .campo-mensagem {
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 150px;
+    width: calc(100% - 40px);
+    border: 1px solid #7e7e7e;
+    padding: 3px;
+    appearance: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.botao-enviar {
+    margin-top: 50px;
+    align-self: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(53, 61, 77);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.botao-enviar:hover {
+    background-color: rgb(140, 104, 82);
+}
+
+.contatoBoxLocalizacao {
+    width: 100%;
+    height: calc(100vh - 90px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contatoBoxLocalizacao h3 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(140, 104, 82);
+    font-size: 40px;
+    padding-bottom: 25px;
+    border-bottom: solid 1px #2e3847;
+
+}
+
+.contatoBoxLocalizacao p {
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.map {
+    height: 100%;
+    padding-bottom: 50px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    transition: filter 1.2s ease;
+    filter: brightness(0.6);
+    box-shadow: 0 0 1px #2e3847;
+
+}
+
+.map iframe:hover {
+    filter: brightness(1);
+}
+
+
+
+
+
+
+
+
+/*main JavaScript*/
+.pg-display-none {
+    display: none;
+    /* Todas as divs começam ocultas */
+}
+
+.homeBox.mostrar {
+    width: 100%;
+    /* height: calc(100vh - 94px); */
+    display: block;
+}
+
+.projetosBox {
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+/*footer*/
+.rodaPe {
+    width: 100%;
+    height: 220px;
+    background-color: #e0d3ce;
+}
+
+.rodaPeBoxGeral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.rodaPeBoxBloco1 {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 75%;
+}
+
+.rodaPeBoxLinks {
+    width: 20%;
+    display: flex;
+    align-items: center;
+
+}
+
+.rodaPeBoxMenu {
+    display: flex;
+    flex-direction: column;
+}
+
+.rodaPeBoxMenuListaTexto {
+    color: #2e3847;
+    text-transform: uppercase;
+    margin-left: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+
+.rodaPeBoxMenuLista {
+    font-family: sans-serif;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    color: #2e3847;
+    text-transform: uppercase;
+    margin-left: 25px;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.rodaPeBoxMenuLista :hover {
+    color: rgb(167, 117, 83);
+}
+
+.rodaPeBoxIcons {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rodaPeBoxIconsContato {
+    height: 50%;
+    width: 80%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+}
+
+.rodaPeBoxIconsContato a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.1s ease;
+}
+
+.rodaPeBoxIconsContato a:hover {
+    opacity: 0.7;
+}
+
+.rodaPeBoxIconsContato img {
+    width: 32px;
+    margin-right: 15px;
+}
+
+.rodaPeBoxIconsContato h1 {
+    color: rgb(38, 38, 38);
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.rodaPeBoxIconsTodos {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodaPeBoxIconsTodos a {
+    transition: opacity 0.1s ease;
+}
+
+.rodaPeBoxIconsTodos a:hover {
+    opacity: 0.7;
+}
+
+.rodaPeBoxIconsTodos img {
+    margin-right: 25px;
+    margin-left: 25px;
+    width: 48px;
+    height: auto;
+}
+
+.rodaPeBoxLogo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.rodaPeBoxLogo img {
+    width: 170px;
+}
+
+.rodaPeBoxBloco2 {
+    display: flex;
+    width: 90%;
+    height: 25%;
+}
+
+.rodaPeBoxDireitos {
+    color: #2e3847;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.rodaPeBoxDireitos br{
+    display: none;
+}
